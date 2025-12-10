@@ -1,92 +1,109 @@
-🎬 Movie Practice
-Movie Practice is a dynamic front-end web application built with React. It allows users to browse popular movies, search for specific titles, and manage a personalized list of favorite movies.
+# 🎬 Movie Practice App
 
-This project was developed to practice fundamental React concepts such as Components, Hooks (useState, useEffect), Context API, and integration with external REST APIs.
+A dynamic movie discovery web application built with **React** and **Vite**. This application allows users to browse popular movies, search for specific titles, and manage a personalized list of favorite movies using the **TMDB API**.
 
-✨ Key Features
-Popular Movies Feed: Displays a real-time list of trending movies fetched from a public API.
+## ✨ Features
 
-Search Functionality: An interactive search feature that allows users to find specific movies by title.
+* **🔥 Popular Movies:** Displays a grid of currently popular movies fetched directly from The Movie Database (TMDB).
+* **🔍 Search Functionality:** Real-time search feature to find movies by title.
+* **❤️ Favorites System:** Add or remove movies from your favorites list.
+* **💾 Local Storage Persistence:** Your favorite movies are saved in the browser's local storage, so they remain saved even after refreshing the page.
+* **📱 Responsive Design:** Fully responsive layout that adapts to desktop, tablet, and mobile screens.
+* **⚡ Fast Performance:** Powered by Vite for lightning-fast development and build speeds.
 
-Favorites Management: Users can add movies to their "Favorites" list and remove them. The favorites state is managed globally using the Context API to ensure accessibility across the app.
+## 🛠️ Tech Stack
 
-Movie Info Cards: Presents movie details (Poster, Title, Release Year) using a reusable UI component.
+* **Frontend:** React.js, Vite
+* **Styling:** CSS3 (Custom modular CSS)
+* **Routing:** React Router DOM (v7)
+* **State Management:** React Context API
+* **Data Source:** TMDB API (The Movie Database)
+* **Deployment Config:** Vercel
 
-Responsive Design: A modern interface that adapts seamlessly to different screen sizes.
+## 📂 Folder Structure
 
-🛠️ Tech Stack
-Frontend Framework: React.js (powered by Vite)
+```text
+frontend/
+├── public/
+├── src/
+│   ├── assets/          # Static assets
+│   ├── components/      # Reusable components (MovieCard, NavBar)
+│   ├── contexts/        # Global State (MovieContext)
+│   ├── css/             # Styling files
+│   ├── pages/           # Page components (Home, Favorites)
+│   ├── services/        # API configuration (api.js)
+│   ├── App.jsx          # Main App component
+│   └── main.jsx         # Entry point
+├── .gitignore
+├── index.html
+├── package.json
+└── vite.config.js
+🚀 Getting Started
+Follow these steps to set up the project locally on your machine.
 
-Language: JavaScript (ES6+)
+Prerequisites
+Node.js (v18 or higher recommended)
 
-Styling: CSS3 (Component-specific stylesheets)
+npm or yarn
 
-State Management: React Context API
-
-Data Source: The Movie Database (TMDB) API
-
-Routing: React Router (for navigation between Home and Favorites)
-
-⚙️ Installation & Setup
-Follow these steps to run the project locally on your machine:
-
-1. Clone the Repository
-Download the source code to your computer:
+Installation
+Clone the repository
 
 Bash
 
-git clone https://github.com/your-username/movie-practice.git
+git clone [https://github.com/your-username/movie-practice.git](https://github.com/your-username/movie-practice.git)
 cd movie-practice
-2. Navigate to Frontend Directory
-Ensure you are in the folder containing package.json:
+Navigate to the frontend directory Important: The project files are located inside the frontend folder.
 
 Bash
 
 cd frontend
-3. Install Dependencies
-Install all necessary libraries (React, React Router, etc.):
+Install dependencies
 
 Bash
 
 npm install
-4. API Key Configuration (Optional)
-If the app requires a TMDB API Key, create a .env file in the frontend folder and add your key:
+API Configuration The project currently uses a hardcoded API key in src/services/api.js.
+
+Optional (Best Practice): You can create a .env file in the frontend root to store your key securely:
 
 Code snippet
 
-VITE_API_KEY=your_tmdb_api_key_here
-(Note: Adjust this according to your implementation in src/services/api.js)
+VITE_TMDB_API_KEY=your_api_key_here
+Note: You would need to update src/services/api.js to read from import.meta.env.VITE_TMDB_API_KEY.
 
-5. Run the Application
-Start the local development server:
+Run the development server
 
 Bash
 
 npm run dev
-Open the URL shown in your terminal (usually http://localhost:5173) in your browser.
+Open the app Open your browser and navigate to http://localhost:5173 (or the port shown in your terminal).
 
-📂 Folder Structure
-Here is an overview of the project structure:
+🌐 Deployment
+This project includes a vercel.json configuration file, making it easy to deploy to Vercel.
 
-frontend/
-├── public/
-├── src/
-│   ├── assets/          # Static assets (images/icons)
-│   ├── components/      # UI Components (MovieCard, NavBar)
-│   ├── contexts/        # Context API (MovieContext) for global state
-│   ├── css/             # Separate CSS files for styling
-│   ├── pages/           # Main Pages (Home, Favorites)
-│   ├── services/        # API call logic (api.js)
-│   ├── App.jsx          # Main component & Route configuration
-│   └── main.jsx         # Application entry point
-├── index.html
-├── package.json
-└── vite.config.js
-🚀 Future Improvements (To-Do)
-[ ] Add a Movie Detail page (Synopsis, Rating, Cast).
+Push your code to GitHub.
 
-[ ] Implement infinite scroll or pagination for the Home page.
+Import the project into Vercel.
 
-[ ] Enhance UI with transition animations.
+Set the Root Directory to frontend in the project settings.
 
-Created by farhan davin rinaldi
+Deploy!
+
+🤝 Contributing
+Contributions are welcome! Feel free to open an issue or submit a pull request if you have any ideas for improvements.
+
+Fork the Project
+
+Create your Feature Branch (git checkout -zb feature/AmazingFeature)
+
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+
+Push to the Branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+📝 License
+Distributed under the MIT License.
+
+Created by Farhan Davin Rinaldi
